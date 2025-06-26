@@ -1,0 +1,102 @@
+/* Typography Setup */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Required Font Sizes and Margins */
+  h1 {
+    font-size: 40px;
+    margin: 20px 0;
+  }
+  
+  #copyright {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+/* Fixed Header and Footer */
+header, footer {
+    position: fixed;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  header {
+    top: 0;
+  }
+  
+  footer {
+    bottom: 0;
+  }
+  
+  /* Spacing for main so it's not hidden under header/footer */
+  main {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  
+  /* Flexbox Nav */
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Grid Layout for About Page */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Box Style */
+  .grid-box {
+    background: #1a1a1a;
+    color: white;
+    padding: 1.5rem;
+    border-left: 4px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px red;
+  }
+  
+  /* Visibility Control */
+  .disappearing {
+    background: #222;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .mobileFeature {
+    display: none;
+  }
+  
+  /* Responsive Breakpoint */
+  @media (max-width: 800px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .disappearing {
+      display: none;
+    }
+  
+    .mobileFeature {
+      display: block;
+      background: #333;
+      color: white;
+      padding: 1rem;
+    }
+  }
