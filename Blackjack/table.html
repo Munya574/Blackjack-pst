@@ -23,6 +23,14 @@
     <p>This is where the action happens! (Cards and dealer logic coming soon.)</p>
   </section>
 
+  <!-- Betting Section (Initially hidden) -->
+  <section id="betting" style="display: none;">
+    <p>Your bankroll: <span id="bankrollDisplay">$2022</span></p>
+    <label for="users-wager">Enter your wager:</label>
+    <input type="number" id="users-wager" min="1" />
+    <button onclick="makeWager()">Bet</button>
+  </section>
+  
   <!-- Player's Actions Section -->
   <section id="playerActions">
     <h3>Player's Actions</h3>
@@ -31,5 +39,10 @@
     <button type="button">Split</button>
   </section>
 
+  <!-- JS: load betting first, after HTML is ready -->
+  <script src="table.js"></script>
+  <script>
+    window.onload = timeToBet;
+  </script>
 </body>
 </html>
